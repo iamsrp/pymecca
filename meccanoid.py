@@ -103,6 +103,9 @@ class Meccanoid(object):
     def servo(self, servo, value):
         """
         Set a servo value.
+        
+        The servo numbers are constants in this module.
+        The value is between 0x00 and 0xff.
         """
 
         servo = int(servo)
