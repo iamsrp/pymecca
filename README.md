@@ -7,4 +7,4 @@ This is some simple Python code for controlling the Meccanoid over Bluetooth. It
    sudo apt-get install python-dev
    sudo pip install pygatt
 
-You will also need to determine the MAC address of your Meccabrain's Bluetooth connection. Something like "hcitool scan" should do the job.
+You will also need to determine the MAC address of your Meccabrain's Bluetooth connection. Something like "sudo hcitool lescan" should do the job.
