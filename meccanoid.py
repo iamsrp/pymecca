@@ -164,6 +164,8 @@ class Meccanoid(object):
     def chest_light(self, light, on):
         """
         Set the on/off state of a chest light.
+
+        The light is a value between 0 and 3.
         """
 
         if 0 <= light and light <= 3:
@@ -182,7 +184,8 @@ class Meccanoid(object):
 
     def move(self, right_speed=0x00, left_speed=0x00):
         """
-        Move the wheels.
+        Move the wheels. The speed values are in the range [-255, 255], where a 
+        negative value means "backwards".
         """
 
         # By default do nothing
@@ -222,11 +225,6 @@ class Meccanoid(object):
                     g << 3 | r,
                     b,
                     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00))
-
-    def do_wake_up(self):
-        """
-        Yawn and stretch, it's a new day.
-        """
 
 
     def _send(self, values):
